@@ -1,0 +1,15 @@
+[user]
+	email = xavier.fontaine@polytechnique.org
+	name = fonfonx
+
+[push]
+	default = current
+
+[alias]
+	co = checkout
+	cm = commit -m
+	st = status
+	cob = checkout -b
+	can = commit --amend --no-edit
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	ap = add -p
