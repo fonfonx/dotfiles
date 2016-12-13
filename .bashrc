@@ -1,3 +1,4 @@
+. ~/.z.sh
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -152,3 +153,15 @@ export VM_MEMORY=4096
 export VM_EXEC_CAP=100
 
 rt() { echo -ne "\033]0;$1\007"; }
+
+export NVM_DIR="/home/xavierf/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+nvm use 4
+
+function set-title() {
+  if [[ -z "$ORIG" ]]; then
+    ORIG=$PS1
+  fi
+  TITLE="\[\e]2;$*\a\]"
+  PS1=${ORIG}${TITLE}
+}
