@@ -13,3 +13,7 @@
 	can = commit --amend --no-edit
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	ap = add -p
+	lg = log --decorate --graph
+
+[core]
+	editor = vim
