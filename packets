@@ -1,0 +1,9 @@
+sudo apt-get install git vim xclip vlc htop texlive texlive-lang-french texlive-latex-extra texmaker wireshark filezilla unrar nmap
+sudo apt install python-pip
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
+# Other packets to install
+# google-chrome-stable skype atom
+# wireshark
+sudo chgrp xavier /usr/bin/dumpcap
+sudo chmod 750 /usr/bin/dumpcap
+sudo setcap cap_net_raw,cap_net_admin+eip /usr/bin/dumpcap
