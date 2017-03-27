@@ -115,29 +115,18 @@ if ! shopt -oq posix; then
 fi
 
 
-# PATH et variables systèmes
-export JAVA_HOME=/usr/lib/jvm/default-java
-#export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/java/bin
-export HADOOP_HOME=~/hadoop-2.5.1
-export PATH=${HADOOP_HOME}/bin:${PATH}
-export HIVE_HOME=~/apache-hive-0.14.0-bin
-export PATH=${HIVE_HOME}/bin:${PATH}
-export MAPLE_HOME=~/maple13
-export PATH=${MAPLE_HOME}/bin:${PATH}
-
-# added by Anaconda 2.1.0 installer
-export PATH="/home/xavier/anaconda/bin:$PATH"
-
 setxkbmap fr
 
-# added scala to the path
-export PATH="/home/xavier/scala-2.11.7/bin:$PATH"
-
-# android studio path
-export PATH="/home/xavier/android-studio/bin:$PATH"
-
-# pour opencv...
+# for opencv...
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+
+# for cuda
+export PATH=$PATH:/usr/local/cuda/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
+
+# for exercism.io
+export PATH=$HOME/Programs/:$PATH
 
 # Bash completion
 if [ -f /etc/bash_completion ]; then
@@ -146,7 +135,7 @@ fi
 
 export GIT_PS1_SHOWDIRTYSTATE=1
 
-export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \[\033[00m\]\$ '
+export PS1='\[\033[01;31m\](\D{%F %T}) \[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \[\033[00m\]$ '
 
 export VM_CPUS=8
 export VM_MEMORY=4096
@@ -154,9 +143,8 @@ export VM_EXEC_CAP=100
 
 rt() { echo -ne "\033]0;$1\007"; }
 
-export NVM_DIR="/home/xavierf/.nvm"
+export NVM_DIR="/home/xavier/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-nvm use 4
 
 function set-title() {
   if [[ -z "$ORIG" ]]; then
@@ -165,3 +153,20 @@ function set-title() {
   TITLE="\[\e]2;$*\a\]"
   PS1=${ORIG}${TITLE}
 }
+
+function clean-tex() {
+  rm *.aux;
+  rm *.gz;
+  rm *.log;
+  rm *.toc;
+  rm *.bbl;
+  rm *.snm;
+  rm *.out;
+  rm *.nav;
+}
+
+function publicip() {
+	curl ipinfo.io/ip
+}
+
+. /home/xavier/torch/install/bin/torch-activate
