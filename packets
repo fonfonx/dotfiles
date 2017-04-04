@@ -1,8 +1,14 @@
 sudo apt-get install git vim xclip vlc htop texlive texlive-lang-french texlive-latex-extra texmaker wireshark filezilla unrar nmap
 sudo apt install python-pip
+
+# nvm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
+
 # Other packets to install
 # google-chrome-stable skype atom
+# apm install --packages-file atom-package-list.txt
+# to list the atom installed packages: apm list --installed --bare > atom-package-list.txt
+
 # wireshark
 sudo chgrp xavier /usr/bin/dumpcap
 sudo chmod 750 /usr/bin/dumpcap
