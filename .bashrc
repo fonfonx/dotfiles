@@ -169,4 +169,3 @@ function publicip() {
 	curl ipinfo.io/ip
 }
 
-. /home/xavier/torch/install/bin/torch-activate

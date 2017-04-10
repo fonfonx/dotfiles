@@ -1,7 +1,12 @@
+atom-format-lua@0.1.5
+atom-jade@0.3.0
 atom-unsaved-changes@0.4.0
 autocomplete-python@1.8.63
+color-picker@2.2.5
 file-icons@2.1.2
 git-blame@0.4.12
 language-lua@0.9.11
+linter@1.11.18
+linter-pep8@1.3.2
 sort-lines@0.14.0
 
