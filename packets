@@ -1,4 +1,4 @@
-sudo apt-get install git vim xclip vlc htop texlive texlive-lang-french texlive-latex-extra texmaker wireshark filezilla unrar nmap
+sudo apt-get install git vim xclip vlc htop texlive texlive-lang-french texlive-latex-extra texmaker wireshark filezilla unrar nmap kolourpaint4 openvpn cmake
 sudo apt install python-pip
 
 # nvm
