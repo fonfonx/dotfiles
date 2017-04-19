@@ -124,6 +124,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 # for cuda
 export PATH=$PATH:/usr/local/cuda/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-cudnn/lib64
 
 # for exercism.io
 export PATH=$HOME/Programs/:$PATH
@@ -155,17 +156,21 @@ function set-title() {
 }
 
 function clean-tex() {
-  rm *.aux;
-  rm *.gz;
-  rm *.log;
-  rm *.toc;
-  rm *.bbl;
-  rm *.snm;
-  rm *.out;
-  rm *.nav;
+  rm -f *.aux;
+  rm -f *.gz;
+  rm -f *.log;
+  rm -f *.toc;
+  rm -f *.bbl;
+  rm -f *.snm;
+  rm -f *.out;
+  rm -f *.nav;
+  rm -f *.blg;
+  rm -f *.dvi;
 }
 
 function publicip() {
 	curl ipinfo.io/ip
 }
+
+. /home/xavier/torch/install/bin/torch-activate
 
