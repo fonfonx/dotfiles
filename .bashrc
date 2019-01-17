@@ -126,8 +126,8 @@ export PATH=$PATH:/usr/local/cuda/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-cudnn/lib64
 
-# for exercism.io
-export PATH=$HOME/Programs/:$PATH
+# for maple
+export PATH=$PATH:/home/xavier/Logiciels/maple13/bin
 
 # Bash completion
 if [ -f /etc/bash_completion ]; then
@@ -172,5 +172,8 @@ function publicip() {
 	curl ipinfo.io/ip
 }
 
-. /home/xavier/torch/install/bin/torch-activate
+alias rmw="sed -i 's/[ \t]*$//'"
+alias op="xdg-open ."
+#. /home/xavier/torch/install/bin/torch-activate
+
 
